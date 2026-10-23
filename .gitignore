@@ -1,0 +1,22 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local data and model outputs
+*.xlsx
+*.xls
+*.csv
+/data/*
+!/data/README.md
+/artifacts/
+/output/
+/tmp/
+*.log
+
+# Python and notebook runtime files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
