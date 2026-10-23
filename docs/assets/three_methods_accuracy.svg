@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="500" viewBox="0 0 1160 500" role="img" aria-label="三种训练方式的七分类准确率">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172033}.title{font-size:28px;font-weight:700}.sub{font-size:15px;fill:#64748b}.label{font-size:16px}.small{font-size:13px;fill:#475569}.box-title{font-size:19px;font-weight:700}.agent{font-size:15px;font-weight:600}</style>
+<rect width="100%" height="100%" rx="20" fill="#f8fafc"/>
+<text x="580.0" y="45.0" text-anchor="middle" class="title">三种训练方式：七分类准确率</text>
+<text x="580.0" y="74.0" text-anchor="middle" class="sub">同一组 83 个历史测试月份；虚线为多数类基准</text>
+<line x1="365.0" y1="125" x2="365.0" y2="400" stroke="#e2e8f0"/>
+<text x="365.0" y="424.0" text-anchor="middle" class="small">0%</text>
+<line x1="535.0" y1="125" x2="535.0" y2="400" stroke="#e2e8f0"/>
+<text x="535.0" y="424.0" text-anchor="middle" class="small">25%</text>
+<line x1="705.0" y1="125" x2="705.0" y2="400" stroke="#e2e8f0"/>
+<text x="705.0" y="424.0" text-anchor="middle" class="small">50%</text>
+<line x1="875.0" y1="125" x2="875.0" y2="400" stroke="#e2e8f0"/>
+<text x="875.0" y="424.0" text-anchor="middle" class="small">75%</text>
+<line x1="1045.0" y1="125" x2="1045.0" y2="400" stroke="#e2e8f0"/>
+<text x="1045.0" y="424.0" text-anchor="middle" class="small">100%</text>
+<line x1="791.0" y1="117" x2="791.0" y2="400" stroke="#475569" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="799.0" y="111.0" text-anchor="start" class="small">多数类基准 62.7%</text>
+<text x="347.0" y="188.0" text-anchor="end" class="label">无训练直接汇总</text>
+<rect x="365" y="163" width="344.1" height="38" rx="10" fill="#94a3b8"/>
+<text x="721.1" y="189.0" text-anchor="start" class="agent">50.6% (42/83)</text>
+<text x="347.0" y="266.0" text-anchor="end" class="label">数值权重训练</text>
+<rect x="365" y="241" width="352.3" height="38" rx="10" fill="#3b82f6"/>
+<text x="729.3" y="267.0" text-anchor="start" class="agent">51.8% (43/83)</text>
+<text x="347.0" y="344.0" text-anchor="end" class="label">文字反思记忆训练</text>
+<rect x="365" y="319" width="516.1" height="38" rx="10" fill="#16a34a"/>
+<text x="893.1" y="345.0" text-anchor="start" class="agent">75.9% (63/83)</text>
+<text x="580.0" y="475.0" text-anchor="middle" class="small">准确率按逐期预测标签与真实标签完全一致计算；数据为保存的历史运行记录。</text>
+</svg>

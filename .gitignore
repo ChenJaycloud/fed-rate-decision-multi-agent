@@ -23,4 +23,4 @@ __pycache__/
 
 # Curated public result labels only
 !results/
-!results/system_c_predictions_by_month.csv
+!results/three_training_methods_predictions_by_month.csv

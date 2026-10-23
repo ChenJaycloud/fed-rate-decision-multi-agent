@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="820" viewBox="0 0 1120 820" role="img" aria-label="数值权重训练的七分类混淆矩阵">
+<defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172033}.title{font-size:28px;font-weight:700}.sub{font-size:15px;fill:#64748b}.label{font-size:16px}.small{font-size:13px;fill:#475569}.box-title{font-size:19px;font-weight:700}.agent{font-size:15px;font-weight:600}</style>
+<rect width="100%" height="100%" rx="20" fill="#f8fafc"/>
+<text x="560.0" y="45.0" text-anchor="middle" class="title">数值权重训练：七分类混淆矩阵</text>
+<text x="560.0" y="75.0" text-anchor="middle" class="sub">行是实际标签，列是预测标签；对角线为分类正确的样本数</text>
+<text x="286.0" y="188.0" text-anchor="end" class="small">小于 -50bp</text>
+<text x="341.0" y="128.0" text-anchor="middle" class="small">小于 -50bp</text>
+<text x="286.0" y="270.0" text-anchor="end" class="small">[-50,-25)bp</text>
+<text x="423.0" y="128.0" text-anchor="middle" class="small">[-50,-25)bp</text>
+<text x="286.0" y="352.0" text-anchor="end" class="small">[-25,0)bp</text>
+<text x="505.0" y="128.0" text-anchor="middle" class="small">[-25,0)bp</text>
+<text x="286.0" y="434.0" text-anchor="end" class="small">0bp</text>
+<text x="587.0" y="128.0" text-anchor="middle" class="small">0bp</text>
+<text x="286.0" y="516.0" text-anchor="end" class="small">(0,25]bp</text>
+<text x="669.0" y="128.0" text-anchor="middle" class="small">(0,25]bp</text>
+<text x="286.0" y="598.0" text-anchor="end" class="small">(25,50]bp</text>
+<text x="751.0" y="128.0" text-anchor="middle" class="small">(25,50]bp</text>
+<text x="286.0" y="680.0" text-anchor="end" class="small">大于 50bp</text>
+<text x="833.0" y="128.0" text-anchor="middle" class="small">大于 50bp</text>
+<rect x="300" y="140" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="341.0" y="189" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="382" y="140" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="423.0" y="189" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="464" y="140" width="82" height="82" fill="rgb(232,241,251)" stroke="#ffffff" stroke-width="3"/>
+<text x="505.0" y="189" text-anchor="middle" class="box-title" fill="#334155">1</text>
+<rect x="546" y="140" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="587.0" y="189" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="628" y="140" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="669.0" y="189" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="710" y="140" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="751.0" y="189" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="792" y="140" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="833.0" y="189" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="300" y="222" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="341.0" y="271" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="382" y="222" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="423.0" y="271" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="464" y="222" width="82" height="82" fill="rgb(232,241,251)" stroke="#ffffff" stroke-width="3"/>
+<text x="505.0" y="271" text-anchor="middle" class="box-title" fill="#334155">1</text>
+<rect x="546" y="222" width="82" height="82" fill="rgb(232,241,251)" stroke="#ffffff" stroke-width="3"/>
+<text x="587.0" y="271" text-anchor="middle" class="box-title" fill="#334155">1</text>
+<rect x="628" y="222" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="669.0" y="271" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="710" y="222" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="751.0" y="271" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="792" y="222" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="833.0" y="271" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="300" y="304" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="341.0" y="353" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="382" y="304" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="423.0" y="353" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="464" y="304" width="82" height="82" fill="rgb(232,241,251)" stroke="#ffffff" stroke-width="3"/>
+<text x="505.0" y="353" text-anchor="middle" class="box-title" fill="#334155">1</text>
+<rect x="546" y="304" width="82" height="82" fill="rgb(194,211,230)" stroke="#ffffff" stroke-width="3"/>
+<text x="587.0" y="353" text-anchor="middle" class="box-title" fill="#334155">7</text>
+<rect x="628" y="304" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="669.0" y="353" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="710" y="304" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="751.0" y="353" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="792" y="304" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="833.0" y="353" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="300" y="386" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="341.0" y="435" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="382" y="386" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="423.0" y="435" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="464" y="386" width="82" height="82" fill="rgb(194,211,230)" stroke="#ffffff" stroke-width="3"/>
+<text x="505.0" y="435" text-anchor="middle" class="box-title" fill="#334155">7</text>
+<rect x="546" y="386" width="82" height="82" fill="rgb(49,96,150)" stroke="#ffffff" stroke-width="3"/>
+<text x="587.0" y="435" text-anchor="middle" class="box-title" fill="#ffffff">30</text>
+<rect x="628" y="386" width="82" height="82" fill="rgb(150,176,206)" stroke="#ffffff" stroke-width="3"/>
+<text x="669.0" y="435" text-anchor="middle" class="box-title" fill="#334155">14</text>
+<rect x="710" y="386" width="82" height="82" fill="rgb(232,241,251)" stroke="#ffffff" stroke-width="3"/>
+<text x="751.0" y="435" text-anchor="middle" class="box-title" fill="#334155">1</text>
+<rect x="792" y="386" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="833.0" y="435" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="300" y="468" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="341.0" y="517" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="382" y="468" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="423.0" y="517" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="464" y="468" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="505.0" y="517" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="546" y="468" width="82" height="82" fill="rgb(226,236,248)" stroke="#ffffff" stroke-width="3"/>
+<text x="587.0" y="517" text-anchor="middle" class="box-title" fill="#334155">2</text>
+<rect x="628" y="468" width="82" height="82" fill="rgb(175,196,220)" stroke="#ffffff" stroke-width="3"/>
+<text x="669.0" y="517" text-anchor="middle" class="box-title" fill="#334155">10</text>
+<rect x="710" y="468" width="82" height="82" fill="rgb(226,236,248)" stroke="#ffffff" stroke-width="3"/>
+<text x="751.0" y="517" text-anchor="middle" class="box-title" fill="#334155">2</text>
+<rect x="792" y="468" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="833.0" y="517" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="300" y="550" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="341.0" y="599" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="382" y="550" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="423.0" y="599" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="464" y="550" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="505.0" y="599" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="546" y="550" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="587.0" y="599" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="628" y="550" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="669.0" y="599" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="710" y="550" width="82" height="82" fill="rgb(226,236,248)" stroke="#ffffff" stroke-width="3"/>
+<text x="751.0" y="599" text-anchor="middle" class="box-title" fill="#334155">2</text>
+<rect x="792" y="550" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="833.0" y="599" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="300" y="632" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="341.0" y="681" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="382" y="632" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="423.0" y="681" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="464" y="632" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="505.0" y="681" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="546" y="632" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="587.0" y="681" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="628" y="632" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="669.0" y="681" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<rect x="710" y="632" width="82" height="82" fill="rgb(213,226,241)" stroke="#ffffff" stroke-width="3"/>
+<text x="751.0" y="681" text-anchor="middle" class="box-title" fill="#334155">4</text>
+<rect x="792" y="632" width="82" height="82" fill="rgb(239,246,255)" stroke="#ffffff" stroke-width="3"/>
+<text x="833.0" y="681" text-anchor="middle" class="box-title" fill="#334155">0</text>
+<text x="587.0" y="769.0" text-anchor="middle" class="label">预测标签</text>
+<text x="72" y="427.0" text-anchor="middle" class="label" transform="rotate(-90 72 427.0)">实际标签</text>
+<text x="560.0" y="800.0" text-anchor="middle" class="small">样本数：83 · 七分类正确：43 · 测试区间：2015—2025</text>
+</svg>
