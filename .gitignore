@@ -20,3 +20,7 @@
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+
+# Curated public result labels only
+!results/
+!results/system_c_predictions_by_month.csv
