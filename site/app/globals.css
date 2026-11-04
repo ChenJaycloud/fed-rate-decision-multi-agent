@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --ink: #14263b;
+  --paper: #f7f6f1;
+  --paper-deep: #efede4;
+  --line: #d8d5ca;
+  --patina: #2e6e62;
+  --rust: #a8452c;
+  --slate: #5b6472;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  color: var(--ink);
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-feature-settings: "tnum" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(46, 110, 98, 0.18);
+}
+
+a {
+  color: inherit;
+}
+
+.hairline {
+  border-color: var(--line);
+}
+
+.rule-top {
+  border-top: 1px solid var(--line);
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.serif {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--patina);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fade-up 0.6s ease-out both;
+}
