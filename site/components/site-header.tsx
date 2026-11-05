@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 const NAV = [
   { href: "/", label: "仪表盘" },
   { href: "/agents", label: "智能体分析" },
-  { href: "/replay", label: "历史回放" },
-  { href: "/history", label: "历史预测" },
+  { href: "/replay", label: "历史预测" },
+  { href: "/history", label: "会议记录" },
   { href: "/performance", label: "预测表现" },
   { href: "/memory", label: "文字记忆" },
   { href: "/about", label: "关于系统" },

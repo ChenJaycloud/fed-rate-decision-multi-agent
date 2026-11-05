@@ -18,7 +18,7 @@ export default async function HistoryPage() {
   return (
     <div className="reveal">
       <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-ink/20 pb-3">
-        <h1 className="serif text-3xl">历史预测</h1>
+        <h1 className="serif text-3xl">会议记录</h1>
         <p className="text-xs text-slate">系统自 2026 年 11 月起持续记录；每条预测独立保存，不覆盖历史版本</p>
       </div>
 

@@ -12,7 +12,6 @@ export default async function PerformancePage() {
     );
   }
   const live = data.live;
-  const archive = data.research_archive;
 
   return (
     <div className="reveal">
@@ -84,56 +83,73 @@ export default async function PerformancePage() {
         <p className="mt-4 text-xs leading-6 text-slate">{live.note}</p>
       </section>
 
-      {archive.available && (
+      {data.history?.available && (
         <section className="mt-14 border-t border-ink/20 pt-8">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
-            <h2 className="serif text-xl">原研究存档（单列）</h2>
-            <span className="text-xs text-slate">2015–2025 ｜ {archive.sample_count} 个月度会议样本 ｜ 发表口径</span>
+            <h2 className="serif text-xl">历史预测记录</h2>
+            <span className="text-xs text-slate">2015–2026 ｜ {data.history.sample_count} 次会议 ｜ 与实时统计分开</span>
           </div>
-          <p className="mt-3 max-w-3xl text-xs leading-6 text-slate">{archive.note}</p>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+            {[
+              { label: "方向准确率", value: pct(data.history.direction_accuracy) },
+              { label: "七档准确率", value: pct(data.history.label_accuracy) },
+              { label: "记录场次", value: String(data.history.sample_count) },
+            ].map((item) => (
+              <div key={item.label} className="border border-line bg-white/60 p-4">
+                <p className="text-xs text-slate">{item.label}</p>
+                <p className="num serif mt-2 text-3xl">{item.value}</p>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_340px]">
             <div className="border border-line bg-white/50 p-4">
-              <ResearchArchiveChart methods={archive.methods} />
-              <p className="num mt-2 text-xs text-slate">
-                多数类基准（恒预测 0bp）：{pct(archive.majority_baseline ?? null)} ｜ 线条为按时间顺序的累计方向准确率
-              </p>
+              <ResearchArchiveChart
+                methods={[{ method: "research_C", name: "历史预测", sample_count: data.history.sample_count, label_accuracy: data.history.label_accuracy ?? 0, direction_accuracy: data.history.direction_accuracy ?? 0, label_correct: 0, cumulative: data.history.cumulative }]}
+              />
+              <p className="num mt-2 text-xs text-slate">按时间顺序的累计方向准确率</p>
             </div>
             <div>
               <table className="w-full text-sm">
                 <tbody>
-                  {archive.methods.map((m) => (
-                    <tr key={m.method} className="border-b border-line/70">
-                      <td className="py-3 pr-3 text-xs text-slate">{m.name}</td>
-                      <td className="num py-3 text-right">
-                        <div className="text-base">{pct(m.label_accuracy)}</div>
-                        <div className="text-[11px] text-slate">七档 {m.label_correct}/{m.sample_count} ｜ 方向 {pct(m.direction_accuracy)}</div>
-                      </td>
+                  {data.history.years.map((y) => (
+                    <tr key={y.year} className="border-b border-line/70">
+                      <td className="py-2 pr-3 text-xs text-slate">{y.year}</td>
+                      <td className="num py-2 text-right text-sm">{pct(y.direction_accuracy)} <span className="text-[11px] text-slate">({y.sample_count} 场)</span></td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-              <p className="mt-3 text-xs leading-6 text-slate">
-                三种方法为同一框架下的历史实验。文字反思记忆为主方法；该结果来自存档运行，未在当前环境重跑，且存在已知 vintage 局限，不能视为实时预测能力的证明。
-              </p>
             </div>
           </div>
 
-          <h3 className="serif mt-8 text-base">逐期结果（文字反思记忆）</h3>
+          {data.history.agents.length > 0 && (
+            <div className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {data.history.agents.map((a) => (
+                <div key={a.theory_id} className="border border-line bg-white/50 px-3 py-2 text-sm">
+                  <p className="text-xs text-slate">{THEORY_TEXT[a.theory_id] || a.theory_id}</p>
+                  <p className="num mt-1">{pct(a.accuracy)} <span className="text-xs text-slate">({a.correct}/{a.total})</span></p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <h3 className="serif mt-8 text-base">逐期结果</h3>
           <div className="mt-3 max-h-[420px] overflow-y-auto border border-line">
             <table className="w-full min-w-[560px] text-sm">
               <thead className="sticky top-0 bg-paper">
                 <tr className="text-left text-xs text-slate">
-                  <th className="px-3 py-2 font-normal">月份</th>
+                  <th className="px-3 py-2 font-normal">会议日</th>
                   <th className="px-3 py-2 font-normal">预测档位</th>
                   <th className="px-3 py-2 font-normal">实际档位</th>
                   <th className="px-3 py-2 font-normal">方向</th>
                 </tr>
               </thead>
               <tbody>
-                {[...archive.timeline].reverse().map((row) => (
-                  <tr key={row.month} className="border-t border-line/60">
-                    <td className="num px-3 py-1.5">{row.month.slice(0, 7)}</td>
+                {[...data.history.timeline].reverse().map((row) => (
+                  <tr key={row.meeting_date} className="border-t border-line/60">
+                    <td className="num px-3 py-1.5">{row.meeting_date}</td>
                     <td className="num px-3 py-1.5">{row.predicted_label}</td>
                     <td className="num px-3 py-1.5">{row.actual_label}</td>
                     <td className={`px-3 py-1.5 text-xs ${row.correct ? "text-patina" : "text-rust"}`}>{row.correct ? "命中" : "未命中"}</td>
@@ -142,6 +158,7 @@ export default async function PerformancePage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-4 text-xs text-slate">{data.history.note}</p>
         </section>
       )}
     </div>

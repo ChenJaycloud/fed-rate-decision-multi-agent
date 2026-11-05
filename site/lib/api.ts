@@ -105,7 +105,20 @@ export type ResearchArchive = {
   note: string;
 };
 
+export type HistoryStats = {
+  available: boolean;
+  sample_count: number;
+  direction_accuracy: number | null;
+  label_accuracy: number | null;
+  cumulative: { date: string; accuracy: number }[];
+  timeline: { meeting_date: string; predicted_label: string; actual_label: string; predicted_action: string; actual_action: string; correct: boolean }[];
+  years: { year: string; sample_count: number; direction_accuracy: number | null }[];
+  agents: { theory_id: string; total: number; correct: number; accuracy: number | null }[];
+  note: string;
+};
+
 export type Performance = {
+  history?: HistoryStats;
   live: {
     sample_count: number;
     meeting_count: number;
