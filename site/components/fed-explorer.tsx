@@ -11,6 +11,7 @@ type Member = {
   voting: boolean;
   alternate: boolean;
   speeches: { title: string; url: string; published_at: string; speaker_title: string | null }[];
+  news: { title: string; url: string; published_at: string; source: string | null; summary: string | null }[];
 };
 
 type People = { as_of: string; voting: Member[]; alternates: Member[] };
@@ -173,19 +174,37 @@ export function FedExplorer() {
               </a>
             )}
           </div>
-          <p className="mt-4 text-xs text-slate">近期官方讲话（来自 Federal Reserve Board 讲话页）</p>
-          {selectedMember.speeches.length === 0 ? (
-            <p className="mt-2 text-sm leading-6 text-slate">
-              暂无收录。地区联储主席的讲话通常发布在各地方联储官网（如 newyorkfed.org），Board 网站只收录理事会成员的讲话。
-            </p>
+          {selectedMember.speeches.length > 0 && (
+            <>
+              <p className="mt-4 text-xs text-slate">官方讲话（Federal Reserve Board 讲话页）</p>
+              <ul className="mt-2 space-y-1.5">
+                {selectedMember.speeches.map((s) => (
+                  <li key={s.url} className="border-b border-line/60 pb-1.5 text-sm">
+                    <a href={BASE + s.url} target="_blank" rel="noreferrer" className="hover:text-patina focus-ring">
+                      {s.title}
+                    </a>
+                    <span className="num ml-2 text-xs text-slate">{s.published_at}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          <p className="mt-4 text-xs text-slate">近期报道与访谈（媒体检索）</p>
+          {selectedMember.news.length === 0 ? (
+            <p className="mt-2 text-sm leading-6 text-slate">近期暂无报道收录。</p>
           ) : (
             <ul className="mt-2 space-y-2">
-              {selectedMember.speeches.map((s) => (
-                <li key={s.url} className="border-b border-line/60 pb-2 text-sm">
-                  <a href={BASE + s.url} target="_blank" rel="noreferrer" className="hover:text-patina focus-ring">
-                    {s.title}
+              {selectedMember.news.map((n) => (
+                <li key={n.url} className="border-b border-line/60 pb-2 text-sm">
+                  <a href={n.url} target="_blank" rel="noreferrer" className="leading-6 hover:text-patina focus-ring">
+                    {n.title}
                   </a>
-                  <span className="num ml-2 text-xs text-slate">{s.published_at}</span>
+                  <span className="num ml-2 text-xs text-slate">
+                    {n.published_at}
+                    {n.source ? ` · ${n.source}` : ""}
+                  </span>
+                  {n.summary && <p className="mt-1 text-xs leading-5 text-slate">{n.summary}</p>}
                 </li>
               ))}
             </ul>
