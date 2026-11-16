@@ -80,7 +80,9 @@ export default async function PerformancePage() {
             )}
           </>
         )}
-        <p className="mt-4 text-xs leading-6 text-slate">{live.note}</p>
+        {live.sample_count > 0 && (
+          <p className="mt-4 text-xs leading-6 text-slate">{live.note}</p>
+        )}
       </section>
 
       {data.history?.available && (

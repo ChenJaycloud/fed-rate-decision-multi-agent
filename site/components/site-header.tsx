@@ -10,6 +10,7 @@ const NAV = [
   { href: "/history", label: "会议记录" },
   { href: "/performance", label: "预测表现" },
   { href: "/memory", label: "文字记忆" },
+  { href: "/system", label: "系统构成" },
   { href: "/about", label: "关于系统" },
 ];
 
